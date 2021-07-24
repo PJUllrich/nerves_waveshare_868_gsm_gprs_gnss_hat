@@ -69,7 +69,7 @@ defmodule WaveshareHat.SMS do
   Don't forget to finish the text input with an `end_mark/1`.
   """
   def set_sms_body(pid, body) when is_binary(body) do
-    write(pid, "> #{body}")
+    write(pid, body)
   end
 
   @doc """
@@ -85,11 +85,11 @@ defmodule WaveshareHat.SMS do
 
       iex> WaveshareHat.set_local_number(pid, "YOUR_NUMBER")
       iex> WaveshareHat.set_sms_body(pid, "Hello there, friend!")
+      iex> WaveshareHat.set_receiver(pid, "YOUR_FRIENDS_NUMBER")
       iex> WaveshareHat.end_mark(pid)
-      iex> WaveshareHat.send_sms(pid, "YOUR_FRIENDS_NUMBER")
 
   """
-  def send_sms(pid, to_number), do: write(pid, "AT+CMGS=\"#{to_number}\"")
+  def set_receiver(pid, to_number), do: write(pid, "AT+CMGS=\"#{to_number}\"")
 
   # Configuration
   @doc """
