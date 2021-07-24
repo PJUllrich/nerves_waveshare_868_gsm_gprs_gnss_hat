@@ -9,7 +9,7 @@ defmodule WaveshareHat.Utils do
   def connect(port) do
     {:ok, pid} = Circuits.UART.start_link()
     :ok = Circuits.UART.open(pid, port, speed: 115_200)
-    :ok = Circuits.UART.configure(pid, framing: {Circuits.UART.Framing.Line, separator: "\\r\\n"})
+    :ok = Circuits.UART.configure(pid, framing: {Circuits.UART.Framing.Line, separator: "\r\n"})
     {:ok, pid}
   end
 
