@@ -1,9 +1,9 @@
-defmodule Waveshare.SMS do
+defmodule WaveshareHat.SMS do
   @moduledoc """
   Includes helper functions for sending and receiving SMS.
   """
 
-  import Waveshare.Utils
+  import WaveshareHat.Utils
 
   @doc """
   Set the number from which SMS message are sent.
@@ -83,10 +83,10 @@ defmodule Waveshare.SMS do
   This is the last command necessary for sending a SMS.
   Make sure to write a message before like this:
 
-      iex> Waveshare.set_local_number(pid, "YOUR_NUMBER")
-      iex> Waveshare.set_sms_body(pid, "Hello there, friend!")
-      iex> Waveshare.end_mark(pid)
-      iex> Waveshare.send_sms(pid, "YOUR_FRIENDS_NUMBER")
+      iex> WaveshareHat.set_local_number(pid, "YOUR_NUMBER")
+      iex> WaveshareHat.set_sms_body(pid, "Hello there, friend!")
+      iex> WaveshareHat.end_mark(pid)
+      iex> WaveshareHat.send_sms(pid, "YOUR_FRIENDS_NUMBER")
 
   """
   def send_sms(pid, to_number), do: write(pid, "AT+CMGS=\"#{to_number}\"")

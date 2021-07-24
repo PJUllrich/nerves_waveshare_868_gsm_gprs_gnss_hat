@@ -1,3 +1,3 @@
-defmodule WaveshareTest do
+defmodule WaveshareHatTest do
   use ExUnit.Case
 end

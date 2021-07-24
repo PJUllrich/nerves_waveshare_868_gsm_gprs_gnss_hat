@@ -1,8 +1,8 @@
-defmodule Waveshare.GNSS do
+defmodule WaveshareHat.GNSS do
   @moduledoc """
   Includes helper functions for GNSS (GPS etc.) functionality.
   """
-  import Waveshare.Utils
+  import WaveshareHat.Utils
 
   @doc """
   Turn the GPS  module On (1) or Off (0)
@@ -33,7 +33,7 @@ defmodule Waveshare.GNSS do
   end
 
   @doc """
-  Enable (1) or disable (0) sending new gps location data from the Waveshare via UART connecton.
+  Enable (1) or disable (0) sending new gps location data from the WaveshareHat via UART connecton.
 
   The output will be according to the [NMEA description](https://navspark.mybigcommerce.com/content/NMEA_Format_v0.1.pdf).
   """

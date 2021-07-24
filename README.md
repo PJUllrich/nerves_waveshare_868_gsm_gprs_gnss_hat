@@ -1,4 +1,4 @@
-# Waveshare GSM/GPRS/GNSS Hat
+# WaveshareHat GSM/GPRS/GNSS Hat
 
 **TODO: Add description**
 
@@ -8,7 +8,7 @@ Add
 ```elixir
 def deps do
   [
-    {:nerves_waveshare_868_gsm_gprs_gnss_hat, "~> 0.1.0"}
+    {:waveshare_hat, "~> 0.1.0"}
   ]
 end
 ```

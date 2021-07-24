@@ -1,9 +1,9 @@
-defmodule Waveshare.Calling do
+defmodule WaveshareHat.Calling do
   @moduledoc """
   Includes helper functions for calling.
   """
 
-  import Waveshare.Utils
+  import WaveshareHat.Utils
 
   @doc """
   Enable (1) or disable (0) CLIP notifications.

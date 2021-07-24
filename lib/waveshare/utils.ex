@@ -1,6 +1,6 @@
-defmodule Waveshare.Utils do
+defmodule WaveshareHat.Utils do
   @moduledoc """
-  Utility functions for the other Waveshare modules.
+  Utility functions for the other WaveshareHat modules.
   """
 
   @doc """
@@ -14,10 +14,10 @@ defmodule Waveshare.Utils do
   def status_sim(pid), do: write(pid, "AT+CPIN?")
 
   @doc """
-  Writes a command to the Waveshare Hat.
+  Writes a command to the WaveshareHat Hat.
   """
   def write(pid, cmd) do
-    Nerves.UART.write(pid, cmd)
+    Circuits.UART.write(pid, cmd)
   end
 
   @doc """
