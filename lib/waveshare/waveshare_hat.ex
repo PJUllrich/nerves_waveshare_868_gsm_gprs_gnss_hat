@@ -36,6 +36,7 @@ defmodule WaveshareHat do
       {:nerves_uart, "/dev/ttyAMA0", "OK"}
       :ok
   """
+  defdelegate connect(port), to: WaveshareHat.Utils
   defdelegate status(pid), to: WaveshareHat.Utils
   defdelegate status_sim(pid), to: WaveshareHat.Utils
   defdelegate write(pid, cmd), to: WaveshareHat.Utils
