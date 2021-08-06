@@ -15,7 +15,7 @@ defmodule WaveshareHat.GNSS do
   Returns the current GPS status.
   """
   def get_status(pid) do
-    write(pid, "AT+CGPSSTATUS")
+    write(pid, "AT+CGPSSTATUS?")
   end
 
   @doc """
